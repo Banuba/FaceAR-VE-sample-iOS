@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3005A832DE054601013E39C6 /* Pods_FaceAR_VE_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */; };
+		8AB40EA125D52C36002A871F /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EA025D52C36002A871F /* effects */; };
+		8AB40EA425D52CCF002A871F /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */; };
+		8AB40EBD25D5334A002A871F /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EBB25D5334A002A871F /* bundleEffects */; };
+		8AB40EBE25D5334A002A871F /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EBC25D5334A002A871F /* luts */; };
+		8ABEFDB025D2C66F00C0B02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */; };
+		8ABEFDB425D2C66F00C0B02F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEFDB325D2C66F00C0B02F /* ViewController.swift */; };
+		8ABEFDB725D2C66F00C0B02F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABEFDB525D2C66F00C0B02F /* Main.storyboard */; };
+		8ABEFDB925D2C67000C0B02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABEFDB825D2C67000C0B02F /* Assets.xcassets */; };
+		8ABEFDBC25D2C67000C0B02F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABEFDBA25D2C67000C0B02F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A15868625D41DD00022E2DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57AB757820FF4A240013C11F;
+			remoteInfo = BanubaSdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
+		8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = ../BanubaSdk.xcodeproj; sourceTree = "<group>"; };
+		8AB40EA025D52C36002A871F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
+		8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
+		8AB40EBB25D5334A002A871F /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
+		8AB40EBC25D5334A002A871F /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
+		8ABEFDAC25D2C66F00C0B02F /* FaceAR-VE-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceAR-VE-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8ABEFDB325D2C66F00C0B02F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8ABEFDB625D2C66F00C0B02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8ABEFDB825D2C67000C0B02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ABEFDBB25D2C67000C0B02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ABEFDBD25D2C67000C0B02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C95E2804C9D13C12035733A2 /* Pods-FaceAR-VE-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR-VE-Sample.release.xcconfig"; path = "Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAR_VE_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4C6928FDE789B15F2B8AFD /* Pods-FaceAR-VE-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR-VE-Sample.debug.xcconfig"; path = "Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8ABEFDA925D2C66F00C0B02F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3005A832DE054601013E39C6 /* Pods_FaceAR_VE_Sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03683F51FC05B511FDC33E14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */,
+				8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */,
+				DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C547DF646BC803FD1AAC750 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF4C6928FDE789B15F2B8AFD /* Pods-FaceAR-VE-Sample.debug.xcconfig */,
+				C95E2804C9D13C12035733A2 /* Pods-FaceAR-VE-Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A15868325D41DD00022E2DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A15868725D41DD00022E2DA /* BanubaSdk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ABEFDA325D2C66F00C0B02F = {
+			isa = PBXGroup;
+			children = (
+				8ABEFDAE25D2C66F00C0B02F /* FaceAR-VE-Sample */,
+				8ABEFDAD25D2C66F00C0B02F /* Products */,
+				5C547DF646BC803FD1AAC750 /* Pods */,
+				03683F51FC05B511FDC33E14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8ABEFDAD25D2C66F00C0B02F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8ABEFDAC25D2C66F00C0B02F /* FaceAR-VE-Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ABEFDAE25D2C66F00C0B02F /* FaceAR-VE-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				8AB40EBB25D5334A002A871F /* bundleEffects */,
+				8AB40EA025D52C36002A871F /* effects */,
+				8AB40EBC25D5334A002A871F /* luts */,
+				8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */,
+				8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */,
+				8ABEFDB325D2C66F00C0B02F /* ViewController.swift */,
+				8ABEFDB525D2C66F00C0B02F /* Main.storyboard */,
+				8ABEFDB825D2C67000C0B02F /* Assets.xcassets */,
+				8ABEFDBA25D2C67000C0B02F /* LaunchScreen.storyboard */,
+				8ABEFDBD25D2C67000C0B02F /* Info.plist */,
+			);
+			path = "FaceAR-VE-Sample";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8ABEFDAB25D2C66F00C0B02F /* FaceAR-VE-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ABEFDC025D2C67000C0B02F /* Build configuration list for PBXNativeTarget "FaceAR-VE-Sample" */;
+			buildPhases = (
+				8D8AD4F5F465FF0F3F0BABCB /* [CP] Check Pods Manifest.lock */,
+				8ABEFDA825D2C66F00C0B02F /* Sources */,
+				8ABEFDA925D2C66F00C0B02F /* Frameworks */,
+				8ABEFDAA25D2C66F00C0B02F /* Resources */,
+				4700E77BB500372711E45044 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FaceAR-VE-Sample";
+			productName = "FaceAR-VE-Sample";
+			productReference = 8ABEFDAC25D2C66F00C0B02F /* FaceAR-VE-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8ABEFDA425D2C66F00C0B02F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8ABEFDAB25D2C66F00C0B02F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 8ABEFDA725D2C66F00C0B02F /* Build configuration list for PBXProject "FaceAR-VE-Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8ABEFDA325D2C66F00C0B02F;
+			productRefGroup = 8ABEFDAD25D2C66F00C0B02F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A15868325D41DD00022E2DA /* Products */;
+					ProjectRef = 8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8ABEFDAB25D2C66F00C0B02F /* FaceAR-VE-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8A15868725D41DD00022E2DA /* BanubaSdk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BanubaSdk.framework;
+			remoteRef = 8A15868625D41DD00022E2DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8ABEFDAA25D2C66F00C0B02F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ABEFDBC25D2C67000C0B02F /* LaunchScreen.storyboard in Resources */,
+				8ABEFDB925D2C67000C0B02F /* Assets.xcassets in Resources */,
+				8ABEFDB725D2C66F00C0B02F /* Main.storyboard in Resources */,
+				8AB40EA125D52C36002A871F /* effects in Resources */,
+				8AB40EBE25D5334A002A871F /* luts in Resources */,
+				8AB40EBD25D5334A002A871F /* bundleEffects in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4700E77BB500372711E45044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D8AD4F5F465FF0F3F0BABCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAR-VE-Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8ABEFDA825D2C66F00C0B02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ABEFDB425D2C66F00C0B02F /* ViewController.swift in Sources */,
+				8ABEFDB025D2C66F00C0B02F /* AppDelegate.swift in Sources */,
+				8AB40EA425D52CCF002A871F /* BanubaClientToken.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8ABEFDB525D2C66F00C0B02F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ABEFDB625D2C66F00C0B02F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8ABEFDBA25D2C67000C0B02F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ABEFDBB25D2C67000C0B02F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8ABEFDBE25D2C67000C0B02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8ABEFDBF25D2C67000C0B02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8ABEFDC125D2C67000C0B02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF4C6928FDE789B15F2B8AFD /* Pods-FaceAR-VE-Sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				INFOPLIST_FILE = "FaceAR-VE-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.banuba.FaceAR-VE-Sample.FaceAR-VE-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8ABEFDC225D2C67000C0B02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C95E2804C9D13C12035733A2 /* Pods-FaceAR-VE-Sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				INFOPLIST_FILE = "FaceAR-VE-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.banuba.FaceAR-VE-Sample.FaceAR-VE-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8ABEFDA725D2C66F00C0B02F /* Build configuration list for PBXProject "FaceAR-VE-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ABEFDBE25D2C67000C0B02F /* Debug */,
+				8ABEFDBF25D2C67000C0B02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ABEFDC025D2C67000C0B02F /* Build configuration list for PBXNativeTarget "FaceAR-VE-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ABEFDC125D2C67000C0B02F /* Debug */,
+				8ABEFDC225D2C67000C0B02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8ABEFDA425D2C66F00C0B02F /* Project object */;
+}
