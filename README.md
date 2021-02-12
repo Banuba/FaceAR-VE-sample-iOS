@@ -1,1 +1,1 @@
-# ve-faceAr-sdk-ios-integration-sample
+# FaceAR-VE-sample-iOS
