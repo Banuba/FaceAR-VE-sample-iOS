@@ -57,7 +57,7 @@ extension FaceARViewController {
     BanubaSdkManager.deinitialize()
     videoEditorSDK = BanubaVideoEditor(
       token: banubaClientToken,
-      effectsToken: vidoEditorEffectsToken,
+      effectsToken: videoEditorEffectsToken,
       configuration: VideoEditorConfig()
     )
     videoEditorSDK?.delegate = self
