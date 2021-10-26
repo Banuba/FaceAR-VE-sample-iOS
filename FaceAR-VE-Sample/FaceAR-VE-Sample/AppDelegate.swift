@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     BanubaSdkManager.initialize(
       resourcePath: [Bundle.main.bundlePath + "/effects"],
-      clientTokenString: banubaClientToken
+      clientTokenString: banubaClientToken,
+      logLevel: .info
     )
     return true
   }

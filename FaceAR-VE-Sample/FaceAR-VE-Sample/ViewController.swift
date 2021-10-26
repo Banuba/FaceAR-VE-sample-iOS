@@ -8,6 +8,8 @@
 import UIKit
 import BanubaSdk
 import BanubaVideoEditorSDK
+import BanubaUtilities
+import VideoEditor
 
 class FaceARViewController: UIViewController {
   
@@ -15,7 +17,7 @@ class FaceARViewController: UIViewController {
   @IBOutlet weak var playerViewContainer: UIView!
   
   // MARK: - Face AR Properties
-  private var sdkManager = BanubaSdkManager()
+  private var sdkManager: BanubaSdkManager? = BanubaSdkManager()
   private let config = EffectPlayerConfiguration(renderMode: .video)
   
   private var effectPlayerView: EffectPlayerView?
@@ -28,19 +30,19 @@ class FaceARViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupEffectPlayerView()
-    sdkManager.setup(configuration: config)
+    sdkManager?.setup(configuration: config)
     setUpRenderSize()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    sdkManager.input.startCamera()
-    _ = sdkManager.loadEffect("UnluckyWitch", synchronous: true)
-    sdkManager.startEffectPlayer()
+    sdkManager?.input.startCamera()
+    sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+    sdkManager?.startEffectPlayer()
   }
   
   deinit {
-    sdkManager.destroyEffectPlayer()
+    sdkManager?.destroyEffectPlayer()
   }
 }
 
@@ -55,10 +57,15 @@ extension FaceARViewController {
 extension FaceARViewController {
   private func createVideoEditorSDK() {
     BanubaSdkManager.deinitialize()
+    
+    sdkManager?.destroyEffectPlayer()
+    sdkManager = nil
+    
     videoEditorSDK = BanubaVideoEditor(
       token: banubaClientToken,
-      effectsToken: videoEditorEffectsToken,
-      configuration: VideoEditorConfig()
+      configuration: VideoEditorConfig(),
+      analytics: nil,
+      externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
   }
@@ -79,19 +86,36 @@ extension FaceARViewController {
       try? manager.removeItem(at: fileURL)
     }
     
+    let exportVideoConfigurations: [ExportVideoConfiguration] = [
+      ExportVideoConfiguration(
+        fileURL: fileURL,
+        quality: .auto,
+        useHEVCCodecIfPossible: true,
+        watermarkConfiguration: nil
+      )
+    ]
+    
+    let exportConfiguration = ExportConfiguration(
+      videoConfigurations: exportVideoConfigurations,
+      isCoverEnabled: true,
+      gifSettings: nil
+    )
+    
     startActivity()
-    videoEditorSDK?.exportVideo(
-      fileURL: fileURL
-    ) { [weak self] (success, error) in
-      DispatchQueue.main.async {
-        self?.stopActivity()
-        if success {
-          self?.shareResultVideo(urls: [fileURL])
-        } else {
-          self?.videoEditorSDK = nil
+    videoEditorSDK?.export(
+      using: exportConfiguration,
+      completion: { [weak self] success, error, exportCoverImages in
+        DispatchQueue.main.async {
+          self?.stopActivity()
+          if success {
+            self?.shareResultVideo(urls: [fileURL])
+          } else {
+            self?.videoEditorSDK = nil
+            self?.reloadSdkManager()
+          }
         }
       }
-    }
+    )
   }
   
   func shareResultVideo(urls: [URL]) {
@@ -99,12 +123,17 @@ extension FaceARViewController {
       activityItems: urls,
       applicationActivities: nil
     )
+      
+    controller.completionWithItemsHandler = { _, _, _, _ in
+      self.videoEditorSDK = nil
+      self.reloadSdkManager()
+    }
+    
     present(
       controller,
       animated: true
     ) {
       self.videoEditorSDK?.clearSessionData()
-      self.videoEditorSDK = nil
     }
   }
 }
@@ -160,6 +189,7 @@ extension FaceARViewController: BanubaVideoEditorDelegate {
       animated: true
     ) { [weak self] in
       self?.videoEditorSDK = nil
+      self?.reloadSdkManager()
     }
   }
   
@@ -174,6 +204,25 @@ extension FaceARViewController: BanubaVideoEditorDelegate {
 
 //MARK: - Face AR Helpers
 extension FaceARViewController {
+  private func reloadSdkManager() {
+    BanubaSdkManager.initialize(
+      resourcePath: [Bundle.main.bundlePath + "/effects"],
+      clientTokenString: banubaClientToken,
+      logLevel: .info
+    )
+    
+    sdkManager = BanubaSdkManager()
+    sdkManager?.setup(configuration: config)
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      self.setUpRenderSize()
+      
+      self.sdkManager?.input.startCamera()
+      self.sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+      self.sdkManager?.startEffectPlayer()
+    }
+  }
+  
   private func setupEffectPlayerView() {
     let preview = EffectPlayerView(frame: playerViewContainer.frame)
     playerViewContainer.addSubview(preview)
@@ -182,8 +231,8 @@ extension FaceARViewController {
   
   private func setUpRenderTarget() {
     guard let effectView = self.effectPlayerView?.layer as? CAEAGLLayer else { return }
-    sdkManager.setRenderTarget(layer: effectView, playerConfiguration: nil)
-    sdkManager.startEffectPlayer()
+    sdkManager?.setRenderTarget(layer: effectView, playerConfiguration: nil)
+    sdkManager?.startEffectPlayer()
   }
   
   private func setUpRenderSize() {

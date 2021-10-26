@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3005A832DE054601013E39C6 /* Pods_FaceAR_VE_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */; };
+		8A828F3D2727FFBC00639C56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A828F3F2727FFBC00639C56 /* Localizable.strings */; };
 		8AB40EA125D52C36002A871F /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EA025D52C36002A871F /* effects */; };
 		8AB40EA425D52CCF002A871F /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */; };
 		8AB40EBD25D5334A002A871F /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EBB25D5334A002A871F /* bundleEffects */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = ../BanubaSdk.xcodeproj; sourceTree = "<group>"; };
+		8A828F3E2727FFBC00639C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A828F402727FFC900639C56 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AB40EA025D52C36002A871F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
 		8AB40EBB25D5334A002A871F /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 				8ABEFDB825D2C67000C0B02F /* Assets.xcassets */,
 				8ABEFDBA25D2C67000C0B02F /* LaunchScreen.storyboard */,
 				8ABEFDBD25D2C67000C0B02F /* Info.plist */,
+				8A828F3F2727FFBC00639C56 /* Localizable.strings */,
 			);
 			path = "FaceAR-VE-Sample";
 			sourceTree = "<group>";
@@ -165,6 +169,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 8ABEFDA325D2C66F00C0B02F;
 			productRefGroup = 8ABEFDAD25D2C66F00C0B02F /* Products */;
@@ -200,6 +205,7 @@
 				8ABEFDBC25D2C67000C0B02F /* LaunchScreen.storyboard in Resources */,
 				8ABEFDB925D2C67000C0B02F /* Assets.xcassets in Resources */,
 				8ABEFDB725D2C66F00C0B02F /* Main.storyboard in Resources */,
+				8A828F3D2727FFBC00639C56 /* Localizable.strings in Resources */,
 				8AB40EA125D52C36002A871F /* effects in Resources */,
 				8AB40EBE25D5334A002A871F /* luts in Resources */,
 				8AB40EBD25D5334A002A871F /* bundleEffects in Resources */,
@@ -264,6 +270,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8A828F3F2727FFBC00639C56 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A828F3E2727FFBC00639C56 /* en */,
+				8A828F402727FFC900639C56 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8ABEFDB525D2C66F00C0B02F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -348,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -407,6 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "FaceAR-VE-Sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -428,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "FaceAR-VE-Sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
