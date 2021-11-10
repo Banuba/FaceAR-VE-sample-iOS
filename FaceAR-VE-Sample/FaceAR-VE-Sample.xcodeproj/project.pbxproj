@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600AA1AD88C6532466DB01F3 /* Pods_FaceAR_VE_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804E39698D5CE20DBE9748B2 /* Pods_FaceAR_VE_Sample.framework */; };
 		70607D81273BCF40000A7843 /* OffscreenEffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70607D80273BCF40000A7843 /* OffscreenEffectPlayer.swift */; };
 		8A828F3D2727FFBC00639C56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A828F3F2727FFBC00639C56 /* Localizable.strings */; };
 		8AB40EA125D52C36002A871F /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EA025D52C36002A871F /* effects */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		70607D80273BCF40000A7843 /* OffscreenEffectPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffscreenEffectPlayer.swift; sourceTree = "<group>"; };
+		804E39698D5CE20DBE9748B2 /* Pods_FaceAR_VE_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAR_VE_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = ../BanubaSdk.xcodeproj; sourceTree = "<group>"; };
 		8A828F3E2727FFBC00639C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		8ABEFDB825D2C67000C0B02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ABEFDBB25D2C67000C0B02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ABEFDBD25D2C67000C0B02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B577AA0BAAC6F5CA1DCFFD5B /* Pods-FaceAR-VE-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR-VE-Sample.release.xcconfig"; path = "Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		CE0459FA5186F942238975A3 /* Pods-FaceAR-VE-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR-VE-Sample.debug.xcconfig"; path = "Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600AA1AD88C6532466DB01F3 /* Pods_FaceAR_VE_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			children = (
 				8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */,
 				8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */,
+				804E39698D5CE20DBE9748B2 /* Pods_FaceAR_VE_Sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,6 +78,8 @@
 		5C547DF646BC803FD1AAC750 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				CE0459FA5186F942238975A3 /* Pods-FaceAR-VE-Sample.debug.xcconfig */,
+				B577AA0BAAC6F5CA1DCFFD5B /* Pods-FaceAR-VE-Sample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -128,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ABEFDC025D2C67000C0B02F /* Build configuration list for PBXNativeTarget "FaceAR-VE-Sample" */;
 			buildPhases = (
+				375F02F044E060D3A0AAC267 /* [CP] Check Pods Manifest.lock */,
 				8ABEFDA825D2C66F00C0B02F /* Sources */,
 				8ABEFDA925D2C66F00C0B02F /* Frameworks */,
 				8ABEFDAA25D2C66F00C0B02F /* Resources */,
+				9B9B8A5B22BBDCCFAAC91D96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +216,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		375F02F044E060D3A0AAC267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAR-VE-Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B9B8A5B22BBDCCFAAC91D96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8ABEFDA825D2C66F00C0B02F /* Sources */ = {
@@ -370,6 +422,7 @@
 		};
 		8ABEFDC125D2C67000C0B02F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0459FA5186F942238975A3 /* Pods-FaceAR-VE-Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +444,7 @@
 		};
 		8ABEFDC225D2C67000C0B02F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B577AA0BAAC6F5CA1DCFFD5B /* Pods-FaceAR-VE-Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
