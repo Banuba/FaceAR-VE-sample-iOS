@@ -37,8 +37,14 @@ class FaceARViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     sdkManager?.input.startCamera()
-    sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+    _ = sdkManager?.loadEffect("UnluckyWitch", synchronous: false)
     sdkManager?.startEffectPlayer()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    sdkManager?.input.stopCamera()
+    sdkManager?.stopEffectPlayer()
   }
   
   deinit {
@@ -218,7 +224,7 @@ extension FaceARViewController {
       self.setUpRenderSize()
       
       self.sdkManager?.input.startCamera()
-      self.sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+      _ = self.sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
       self.sdkManager?.startEffectPlayer()
     }
   }

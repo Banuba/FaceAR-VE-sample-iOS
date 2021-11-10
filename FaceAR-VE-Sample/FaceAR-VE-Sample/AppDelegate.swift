@@ -7,6 +7,7 @@
 
 import UIKit
 import BanubaSdk
+import BanubaEffectPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    let bundleRoot = Bundle.init(for: BNBEffectPlayer.self).bundlePath
+    let dirs = [bundleRoot + "/bnb-resources", Bundle.main.bundlePath + "/effects"]
     BanubaSdkManager.initialize(
-      resourcePath: [Bundle.main.bundlePath + "/effects"],
+      resourcePath: dirs,
       clientTokenString: banubaClientToken,
       logLevel: .info
     )

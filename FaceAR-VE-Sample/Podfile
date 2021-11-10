@@ -6,7 +6,7 @@ target 'FaceAR-VE-Sample' do
   pod 'BanubaVideoEditorSDK', '1.19.1'
   pod 'BanubaMusicEditorSDK', '1.19.0'
   pod 'BanubaOverlayEditorSDK', '1.19.0'
-  pod 'BanubaSDKSimple', '1.19.1'
+  pod 'BanubaSDKSimple', '0.20.0'
   pod 'BanubaSDKServicing', '1.19.1'
   pod 'VideoEditor', '1.19.0'
   pod 'BanubaUtilities', '1.19.1'

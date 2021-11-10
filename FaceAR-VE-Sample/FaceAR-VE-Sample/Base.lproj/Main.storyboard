@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,22 @@
                                     <constraint firstAttribute="width" secondItem="h3g-LP-GkK" secondAttribute="height" multiplier="9:16" id="bLe-LZ-Eqr"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-pO-9rP">
+                                <rect key="frame" x="137" y="732" width="140" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0WR-oT-EHm"/>
+                                    <constraint firstAttribute="width" constant="140" id="dc9-dc-W6a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="OEP">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tj7-q4-wvu" kind="show" id="MpM-Jv-huh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akH-eC-CJx">
                                 <rect key="frame" x="137" y="787" width="140" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,6 +63,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="akH-eC-CJx" secondAttribute="bottom" constant="30" id="96B-IM-QrV"/>
                             <constraint firstAttribute="bottom" secondItem="h3g-LP-GkK" secondAttribute="bottom" id="Pi0-Xd-4rS"/>
                             <constraint firstItem="akH-eC-CJx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YYw-Rj-prD"/>
+                            <constraint firstItem="akH-eC-CJx" firstAttribute="top" secondItem="Aj4-pO-9rP" secondAttribute="bottom" constant="10" id="eBF-P5-IFO"/>
+                            <constraint firstItem="Aj4-pO-9rP" firstAttribute="centerX" secondItem="akH-eC-CJx" secondAttribute="centerX" id="oKs-qG-bCb"/>
                             <constraint firstItem="h3g-LP-GkK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s4T-m3-T5d"/>
                         </constraints>
                     </view>
@@ -57,6 +75,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--Offscreen Effect Player-->
+        <scene sceneID="VPB-zL-cCV">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Tj7-q4-wvu" customClass="OffscreenEffectPlayer" customModule="FaceAR_VE_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D31-2T-4rk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RWs-9x-HOA">
+                                <rect key="frame" x="-45" y="0.0" width="504" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RWs-9x-HOA" secondAttribute="height" multiplier="9:16" id="PDs-am-aWv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIm-L4-SMu">
+                                <rect key="frame" x="137" y="787" width="140" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3b3-WP-rBG"/>
+                                    <constraint firstAttribute="width" constant="140" id="JIm-9X-J6M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Close OEP">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeOEP:" destination="Tj7-q4-wvu" eventType="touchUpInside" id="aKg-0o-soF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NHR-8g-LSq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RWs-9x-HOA" secondAttribute="bottom" id="Avc-4y-4cz"/>
+                            <constraint firstItem="RWs-9x-HOA" firstAttribute="top" secondItem="D31-2T-4rk" secondAttribute="top" id="C1Z-lu-ROI"/>
+                            <constraint firstItem="xIm-L4-SMu" firstAttribute="centerX" secondItem="NHR-8g-LSq" secondAttribute="centerX" id="RjF-bb-8zj"/>
+                            <constraint firstItem="RWs-9x-HOA" firstAttribute="centerX" secondItem="NHR-8g-LSq" secondAttribute="centerX" id="YKy-Bh-hJD"/>
+                            <constraint firstItem="NHR-8g-LSq" firstAttribute="bottom" secondItem="xIm-L4-SMu" secondAttribute="bottom" constant="30" id="wh9-wO-Hp4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SKr-5b-qU6"/>
+                    <connections>
+                        <outlet property="imageView" destination="RWs-9x-HOA" id="hzf-9e-Ezz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJ7-qT-r8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
