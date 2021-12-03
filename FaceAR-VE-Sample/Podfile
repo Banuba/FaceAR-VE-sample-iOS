@@ -4,20 +4,20 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'FaceAR-VE-Sample' do
-  pod 'BanubaVideoEditorSDK', '1.20.0'
-  pod 'BanubaMusicEditorSDK', '1.20.0'
-  pod 'BanubaOverlayEditorSDK', '1.20.0'
-  pod 'BanubaSDKSimple', '1.20.0'
-  pod 'BanubaSDKServicing', '1.20.0'
-  pod 'VideoEditor', '1.20.0'
-  pod 'BanubaUtilities', '1.20.0'
-  pod 'BanubaVideoEditorEffectsSDK', '1.20.0'
-  pod 'BanubaLicenseServicingSDK', '1.20.0'
-  pod 'BNBLicenseUtils', '1.20.0'
-  pod 'BanubaARCloudSDK', '1.20.0' #optional
-  pod 'BanubaAudioBrowserSDK', '1.20.0' #optional
-  pod 'BanubaVideoEditorGallerySDK', '1.20.0' #optional
+  pod 'BanubaVideoEditorSDK', '1.20.1'
+  pod 'BanubaMusicEditorSDK', '1.20.1'
+  pod 'BanubaOverlayEditorSDK', '1.20.1'
+  pod 'BanubaSDKSimple', '1.20.1'
+  pod 'BanubaSDKServicing', '1.20.1'
+  pod 'VideoEditor', '1.20.1'
+  pod 'BanubaUtilities', '1.20.1'
+  pod 'BanubaVideoEditorEffectsSDK', '1.20.1'
+  pod 'BanubaLicenseServicingSDK', '1.20.1'
+  pod 'BNBLicenseUtils', '1.20.1'
+  pod 'BanubaARCloudSDK', '1.20.1' #optional
+  pod 'BanubaAudioBrowserSDK', '1.20.1' #optional
+  pod 'BanubaVideoEditorGallerySDK', '1.20.1' #optional
   pod 'BanubaEffectPlayer', '1.20.0' #optional
-  pod 'BanubaSDK', '1.20.0' #optional
-  pod 'BanubaVideoEditorTrimSDK', '1.20.0'
+  pod 'BanubaSDK', '1.20.1' #optional
+  pod 'BanubaVideoEditorTrimSDK', '1.20.1'
 end
