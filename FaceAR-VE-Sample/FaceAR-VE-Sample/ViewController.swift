@@ -72,9 +72,14 @@ extension FaceARViewController {
   
   private func presentVideoEditorSDK() {
     createVideoEditorSDK()
+    
+    let launchConfig = VideoEditorLaunchConfig(
+      entryPoint: .camera,
+      hostController: self,
+      animated: true
+    )
     videoEditorSDK?.presentVideoEditor(
-      from: self,
-      animated: true,
+      withLaunchConfiguration: launchConfig,
       completion: nil
     )
   }
