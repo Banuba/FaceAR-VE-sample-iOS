@@ -10,6 +10,7 @@ import BanubaSdk
 import BanubaVideoEditorSDK
 import BanubaUtilities
 import VideoEditor
+import VEExportSDK
 
 class FaceARViewController: UIViewController {
   
@@ -64,7 +65,6 @@ extension FaceARViewController {
     videoEditorSDK = BanubaVideoEditor(
       token: banubaClientToken,
       configuration: VideoEditorConfig(),
-      analytics: nil,
       externalViewControllerFactory: nil
     )
     videoEditorSDK?.delegate = self
