@@ -1,0 +1,11 @@
+framework module BanubaSdkSimple {
+  umbrella header "BanubaSdkSimple.h"
+
+  export *
+  module * { export * }
+}
+
+module BanubaSdkSimple.Swift {
+    header "BanubaSdkSimple-Swift.h"
+    requires objc
+}

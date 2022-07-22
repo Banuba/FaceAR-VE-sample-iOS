@@ -1,0 +1,11 @@
+framework module BanubaTokenStorageSDK {
+  umbrella header "BanubaTokenStorageSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BanubaTokenStorageSDK.Swift {
+    header "BanubaTokenStorageSDK-Swift.h"
+    requires objc
+}

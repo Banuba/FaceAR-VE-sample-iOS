@@ -1,0 +1,514 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name BanubaOverlayEditorSDK
+import AVFoundation
+@_exported import BanubaOverlayEditorSDK
+import BanubaUtilities
+import CloudKit
+import CoreGraphics
+import CoreMedia
+import Foundation
+import Swift
+import UIKit
+import VEEffectsSDK
+import VEPlaybackSDK
+import VideoEditor
+import _Concurrency
+public struct OverlayEditorConfiguration {
+  public var mainOverlayViewControllerConfig: BanubaOverlayEditorSDK.MainOverlayViewControllerConfig
+  public var overlayType: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`
+  public var selectedOverlayItem: BanubaOverlayEditorSDK.OverlayItem?
+  public var interactivesConfig: BanubaOverlayEditorSDK.InteractivesConfiguration?
+  public static var `default`: BanubaOverlayEditorSDK.OverlayEditorConfiguration {
+    get
+  }
+  public init(mainOverlayViewControllerConfig: BanubaOverlayEditorSDK.MainOverlayViewControllerConfig, overlayType: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`, selectedOverlayItem: BanubaOverlayEditorSDK.OverlayItem? = nil)
+}
+public struct MainOverlayViewControllerConfig {
+  @available(*, unavailable, renamed: "addButtons")
+  public var editButtons: [BanubaOverlayEditorSDK.OverlayAddButtonConfig]?
+  public var addButtons: [BanubaOverlayEditorSDK.OverlayAddButtonConfig]
+  public var editButtonsHeight: CoreGraphics.CGFloat
+  public var editButtonsInteritemSpacing: CoreGraphics.CGFloat
+  public var editCompositionButtons: [BanubaOverlayEditorSDK.OverlayEditButtonConfig]
+  public var controlButtons: [BanubaOverlayEditorSDK.OverlayControlButtonConfig]
+  public var playerControlsHeight: CoreGraphics.CGFloat
+  public var mainLabelColors: UIKit.UIColor
+  public var additionalLabelColors: UIKit.UIColor
+  public var additionalLabelFonts: UIKit.UIFont
+  public var cursorColor: UIKit.UIColor
+  public var audioWaveConfiguration: BanubaOverlayEditorSDK.OverlayItemConfiguration
+  public var resizeImageName: Swift.String
+  public var draggersHorizontalInset: CoreGraphics.CGFloat
+  public var draggersHeight: CoreGraphics.CGFloat?
+  public var backgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+  public var playerControlsBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+  public var defaultLinesCount: Swift.Int
+  public var timelineCornerRadius: CoreGraphics.CGFloat
+  public var draggerBackgroundColor: UIKit.UIColor
+  public var timeLabelsOffset: CoreGraphics.CGFloat
+  public var itemsTopOffset: CoreGraphics.CGFloat
+  public var alertConfig: BanubaUtilities.AlertViewConfiguration
+  public var previewViewBackgroundConfiguration: BanubaUtilities.BackgroundConfiguration
+}
+public struct OverlayAddButtonConfig {
+  public enum `Type` : Swift.String {
+    case text
+    case sticker
+    case pixelate
+    public var editioEffectType: VideoEditor.EditorEffectType {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`
+  public let title: Swift.String
+  public let titleColor: UIKit.UIColor
+  public var font: UIKit.UIFont
+  public let imageName: Swift.String
+  public var drawableFigure: BanubaUtilities.DrawableFigure?
+  public init(type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`, title: Swift.String, titleColor: UIKit.UIColor, font: UIKit.UIFont, imageName: Swift.String, drawableFigure: BanubaUtilities.DrawableFigure? = nil)
+}
+@available(*, unavailable, renamed: "OverlayAddButtonConfig")
+public struct OverlayEditorEditButtonConfig {
+  public enum `Type` : Swift.String {
+    case text
+    case sticker
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: BanubaOverlayEditorSDK.OverlayEditorEditButtonConfig.`Type`
+  public let title: Swift.String
+  public let titleColor: UIKit.UIColor
+  public var font: UIKit.UIFont
+  public let imageName: Swift.String
+  public init(type: BanubaOverlayEditorSDK.OverlayEditorEditButtonConfig.`Type`, title: Swift.String, titleColor: UIKit.UIColor, font: UIKit.UIFont, imageName: Swift.String)
+}
+@available(*, unavailable, renamed: "OverlayEditButtonConfig")
+public struct OverlayEditCompositionButtonConfig {
+  public enum `Type` : Swift.String {
+    case edit
+    case delete
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: BanubaOverlayEditorSDK.OverlayEditCompositionButtonConfig.`Type`
+  public let title: Swift.String
+  public let titleColor: UIKit.UIColor
+  public var font: UIKit.UIFont
+  public let imageName: Swift.String
+  public let selectedImageName: Swift.String?
+  public init(type: BanubaOverlayEditorSDK.OverlayEditCompositionButtonConfig.`Type`, title: Swift.String, titleColor: UIKit.UIColor, font: UIKit.UIFont, imageName: Swift.String, selectedImageName: Swift.String?)
+}
+public struct OverlayEditButtonConfig {
+  public enum `Type` : Swift.String {
+    case edit
+    case delete
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: BanubaOverlayEditorSDK.OverlayEditButtonConfig.`Type`
+  public let title: Swift.String
+  public let titleColor: UIKit.UIColor
+  public var font: UIKit.UIFont
+  public let imageName: Swift.String
+  public let selectedImageName: Swift.String?
+  public init(type: BanubaOverlayEditorSDK.OverlayEditButtonConfig.`Type`, title: Swift.String, titleColor: UIKit.UIColor, font: UIKit.UIFont, imageName: Swift.String, selectedImageName: Swift.String?)
+}
+public struct OverlayControlButtonConfig {
+  public enum `Type` : Swift.String {
+    case reset
+    case play
+    case done
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: BanubaOverlayEditorSDK.OverlayControlButtonConfig.`Type`
+  public let imageName: Swift.String
+  public let selectedImageName: Swift.String?
+  public let imageEdgeInsets: UIKit.UIEdgeInsets?
+  public init(type: BanubaOverlayEditorSDK.OverlayControlButtonConfig.`Type`, imageName: Swift.String, selectedImageName: Swift.String?, imageEdgeInsets: UIKit.UIEdgeInsets? = nil)
+}
+public struct OverlayItemConfiguration {
+  public var borderColor: UIKit.UIColor
+  public var cornerRadius: CoreGraphics.CGFloat
+  public var borderWidth: CoreGraphics.CGFloat
+  public var borderInset: CoreGraphics.CGFloat
+  public var height: CoreGraphics.CGFloat
+  public var titleFont: UIKit.UIFont?
+  public var titleColor: UIKit.UIColor?
+  public var imageInset: UIKit.UIEdgeInsets
+}
+public typealias TextButtonConfig = BanubaOverlayEditorSDK.OverlayEditor.TextButtonConfig
+public struct OverlayEditor {
+  public struct TextButtonConfig {
+    public var font: UIKit.UIFont
+    public var color: UIKit.UIColor
+    public var title: Swift.String
+  }
+}
+public struct InteractivesConfiguration {
+  public var interactivesPickerConfiguration: BanubaOverlayEditorSDK.InteractivesPickerConfiguration
+  public var interactiveTestConfiguration: BanubaOverlayEditorSDK.InteractiveTestConfiguration?
+  public var editorQuestionConfiguration: BanubaOverlayEditorSDK.EditorQuestionConfiguration?
+  public var interactivePollConfiguration: BanubaOverlayEditorSDK.InteractivePollConfiguration?
+  public var interactiveInterestConfiguration: BanubaOverlayEditorSDK.InteractiveInterestConfiguration?
+  public static var `default`: BanubaOverlayEditorSDK.InteractivesConfiguration {
+    get
+  }
+  public init(interactivesPickerConfiguration: BanubaOverlayEditorSDK.InteractivesPickerConfiguration, interactiveTestConfiguration: BanubaOverlayEditorSDK.InteractiveTestConfiguration?, editorQuestionConfiguration: BanubaOverlayEditorSDK.EditorQuestionConfiguration?, interactivePollConfiguration: BanubaOverlayEditorSDK.InteractivePollConfiguration?, interactiveInterestConfiguration: BanubaOverlayEditorSDK.InteractiveInterestConfiguration?)
+}
+public struct InteractivesPickerConfiguration {
+  public static var `default`: BanubaOverlayEditorSDK.InteractivesPickerConfiguration {
+    get
+  }
+}
+public struct InteractiveTestConfiguration {
+}
+public struct EditorQuestionConfiguration {
+  public var textFont: UIKit.UIFont
+}
+public struct InteractivePollConfiguration {
+  public var textFont: UIKit.UIFont
+}
+public struct InteractiveInterestConfiguration {
+  public var font: UIKit.UIFont
+  public var provider: BanubaOverlayEditorSDK.InteractiveInterestProvider?
+}
+public protocol InteractiveInterestProvider {
+  func searchTitle(_ title: Swift.String)
+  var resultHandler: (([Swift.String]) -> Swift.Void)? { get set }
+}
+public enum VideoEditorInteractiveType {
+  case interest
+  case question
+  case test
+  case poll
+  public static func type(for object: BanubaOverlayEditorSDK.OverlayItem) -> BanubaOverlayEditorSDK.VideoEditorInteractiveType?
+  public static func == (a: BanubaOverlayEditorSDK.VideoEditorInteractiveType, b: BanubaOverlayEditorSDK.VideoEditorInteractiveType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol OverlayEditorPlayablePreview : BanubaOverlayEditorSDK.OverlayItemDisplayable, VEPlaybackSDK.PlayableViewController {
+}
+@_hasMissingDesignatedInitializers final public class OverlayItemLinePosition : Swift.Equatable, Swift.Hashable {
+  final public var orderNumber: Swift.Int
+  public static func == (lhs: BanubaOverlayEditorSDK.OverlayItemLinePosition, rhs: BanubaOverlayEditorSDK.OverlayItemLinePosition) -> Swift.Bool
+  final public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  final public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InteractiveInterestViewController : UIKit.UIViewController, BanubaOverlayEditorSDK.OverlayItemProducibleViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: BanubaOverlayEditorSDK.OverlayItemProducibleViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension BanubaOverlayEditorSDK.InteractiveInterestViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public protocol OverlayItem : Foundation.NSCopying {
+  var id: Swift.String { get }
+  var image: UIKit.UIImage { get set }
+  var startTime: CoreMedia.CMTime { get set }
+  var endTime: CoreMedia.CMTime { get set }
+  var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle { get }
+  var isEditable: Swift.Bool { get }
+  var frame: CoreGraphics.CGRect { get set }
+  var transform: CoreGraphics.CGAffineTransform { get set }
+  var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`? { get }
+  var position: BanubaOverlayEditorSDK.OverlayItemLinePosition? { get set }
+  var order: Swift.Int { get set }
+}
+public enum OverlayItemPresentationStyle : Swift.Equatable {
+  case text(Swift.String)
+  case image(UIKit.UIImage)
+  case pixelate(Swift.String)
+  public static func == (a: BanubaOverlayEditorSDK.OverlayItemPresentationStyle, b: BanubaOverlayEditorSDK.OverlayItemPresentationStyle) -> Swift.Bool
+}
+public protocol InteractivePickerViewControllerDelegate : AnyObject {
+  func interactivePickerViewController(_ controller: BanubaOverlayEditorSDK.InteractivePickerViewController, presentMessage message: Swift.String)
+  func interactivePickerViewControllerDidCancel(_ controller: BanubaOverlayEditorSDK.InteractivePickerViewController)
+  func interactivePickerViewControllerDidChangeToIdle(_ controller: BanubaOverlayEditorSDK.InteractivePickerViewController)
+  func interactivePickerViewController(_ controller: BanubaOverlayEditorSDK.InteractivePickerViewController, didSelectInteractive interactive: BanubaOverlayEditorSDK.VideoEditorInteractiveType)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InteractivePickerViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var slideInTransitioningDelegate: UIKit.UIViewControllerTransitioningDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: BanubaOverlayEditorSDK.InteractivePickerViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var configuration: BanubaOverlayEditorSDK.InteractivesPickerConfiguration? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public class InteractiveTest : BanubaOverlayEditorSDK.OverlayItem {
+  public var id: Swift.String
+  public var startTime: CoreMedia.CMTime
+  public var endTime: CoreMedia.CMTime
+  public var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle {
+    get
+  }
+  public var isEditable: Swift.Bool {
+    get
+  }
+  public var image: UIKit.UIImage
+  public var color: BanubaOverlayEditorSDK.GradientColorPair
+  public var title: Swift.String
+  public var fields: [BanubaOverlayEditorSDK.InteractiveTestFieldData]
+  public var frame: CoreGraphics.CGRect
+  public var transform: CoreGraphics.CGAffineTransform
+  public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
+  public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
+  public init(id: Swift.String, title: Swift.String, image: UIKit.UIImage, color: BanubaOverlayEditorSDK.GradientColorPair, fields: [BanubaOverlayEditorSDK.InteractiveTestFieldData], startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+public struct InteractiveTestFieldData {
+  public var answer: Swift.String
+  public var isAnswer: Swift.Bool
+  public init(answer: Swift.String, isAnswer: Swift.Bool)
+}
+public class VideoOverlayObjectWithPixelate : BanubaOverlayEditorSDK.OverlayItem {
+  public var pixelateEffectId: Swift.UInt
+  public var pixelateCoordinateParams: BanubaUtilities.PixelateCoordinateParams
+  final public let id: Swift.String
+  public var image: UIKit.UIImage
+  public var pixelateView: UIKit.UIView
+  public var pixelateFigure: BanubaUtilities.DrawableFigure
+  public var startTime: CoreMedia.CMTime
+  public var endTime: CoreMedia.CMTime
+  public var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle {
+    get
+  }
+  public var isEditable: Swift.Bool {
+    get
+  }
+  public var frame: CoreGraphics.CGRect
+  public var transform: CoreGraphics.CGAffineTransform
+  public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
+  public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
+  public init(id: Swift.String, pixelateEffectId: Swift.UInt, pixelateView: UIKit.UIView, pixelateFigure: BanubaUtilities.DrawableFigure, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, pixelateCoordinateParams: BanubaUtilities.PixelateCoordinateParams, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int = .zero)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+extension BanubaOverlayEditorSDK.VideoOverlayObjectWithPixelate : Swift.Equatable {
+  public static func == (lhs: BanubaOverlayEditorSDK.VideoOverlayObjectWithPixelate, rhs: BanubaOverlayEditorSDK.VideoOverlayObjectWithPixelate) -> Swift.Bool
+}
+public protocol BanubaOverlayEditorDelegate : AnyObject {
+  func banubaOverlayEditor(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, didChooseOverlayWithId id: Swift.String)
+  func banubaOverlayEditor(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, didAddPixelateItem pixelateItem: BanubaOverlayEditorSDK.VideoOverlayObjectWithPixelate)
+  func banubaOverlayEditor(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, didChangePixelateItem pixelateItem: BanubaOverlayEditorSDK.VideoOverlayObjectWithPixelate)
+  func banubaOverlayEditor(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, didDeletePixelateItem pixelateItem: BanubaOverlayEditorSDK.OverlayItem)
+  func banubaOverlayEditorDidDone(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, withOverlayItems overlayItems: [BanubaOverlayEditorSDK.OverlayItem]?)
+  func banubaOverlayEditorDidCancel(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor)
+  func banubaOverlayEditor(overlayEditor: BanubaOverlayEditorSDK.BanubaOverlayEditor, didPresent message: Swift.String)
+}
+public protocol OverlayItemProducibleViewControllerDelegate : AnyObject {
+  func overlayItemProducibleViewControllerDidDone(viewController: BanubaOverlayEditorSDK.OverlayItemProducibleViewController, with overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+  func overlayItemProducibleViewControllerDidCancel(viewController: BanubaOverlayEditorSDK.OverlayItemProducibleViewController)
+  func overlayItemProducibleViewController(viewController: BanubaOverlayEditorSDK.OverlayItemProducibleViewController, didPresent message: Swift.String)
+}
+public protocol OverlayItemProducibleViewController : UIKit.UIViewController {
+  var delegate: BanubaOverlayEditorSDK.OverlayItemProducibleViewControllerDelegate? { get set }
+}
+public protocol OverlayItemProducersViewControllerFactory : AnyObject {
+  func makeOverlayItemProducibleViewController(for overlayItem: BanubaOverlayEditorSDK.OverlayItem) -> BanubaOverlayEditorSDK.OverlayItemProducibleViewController?
+  func makeOverlayItemProducibleViewController(for type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`) -> BanubaOverlayEditorSDK.OverlayItemProducibleViewController
+}
+public class BanubaOverlayEditor {
+  weak public var delegate: BanubaOverlayEditorSDK.BanubaOverlayEditorDelegate?
+  final public let configuration: BanubaOverlayEditorSDK.OverlayEditorConfiguration
+  public init(overlayEditorConfiguration: BanubaOverlayEditorSDK.OverlayEditorConfiguration, playablePreview: BanubaOverlayEditorSDK.OverlayEditorPlayablePreview, timeLineDataSource: BanubaUtilities.TimeLineDataSource, overlayItemProducersViewControllerFactory: BanubaOverlayEditorSDK.OverlayItemProducersViewControllerFactory)
+  public func presentOverlayEditor(from hostController: UIKit.UIViewController, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  public func dismissOverlayEditor(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @objc deinit
+}
+public class InteractiveViewControllerFactory {
+  final public let interactivesConfiguration: BanubaOverlayEditorSDK.InteractivesConfiguration
+  public init(interactivesConfiguration: BanubaOverlayEditorSDK.InteractivesConfiguration)
+  public func makeInteractivePickerViewController() -> BanubaOverlayEditorSDK.InteractivePickerViewController
+  public func makeInteractiveInterestViewController(with overlayItem: BanubaOverlayEditorSDK.OverlayItem?) -> BanubaOverlayEditorSDK.InteractiveInterestViewController
+  public func makeInteractivePollViewController(with overlayItem: BanubaOverlayEditorSDK.OverlayItem?) -> BanubaOverlayEditorSDK.InteractivePollViewController
+  public func makeInteractiveTestViewController(with overlayItem: BanubaOverlayEditorSDK.OverlayItem?) -> BanubaOverlayEditorSDK.InteractiveTestViewController
+  public func makeInteractiveEditorQuestionViewController(with overlayItem: BanubaOverlayEditorSDK.OverlayItem?) -> BanubaOverlayEditorSDK.EditorQuestionViewController
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class EditorQuestionViewController : UIKit.UIViewController, BanubaOverlayEditorSDK.OverlayItemProducibleViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: BanubaOverlayEditorSDK.OverlayItemProducibleViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InteractivePollViewController : UIKit.UIViewController, BanubaOverlayEditorSDK.OverlayItemProducibleViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: BanubaOverlayEditorSDK.OverlayItemProducibleViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct GradientColorPair {
+  public var gradientColors: [UIKit.UIColor]
+  public var textColor: UIKit.UIColor
+  public init(gradientColors: [UIKit.UIColor], textColor: UIKit.UIColor)
+}
+public class InteractiveInterest : BanubaOverlayEditorSDK.OverlayItem {
+  final public let id: Swift.String
+  public var image: UIKit.UIImage
+  public var title: Swift.String
+  public var font: UIKit.UIFont
+  public var startTime: CoreMedia.CMTime
+  public var endTime: CoreMedia.CMTime
+  public var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle {
+    get
+  }
+  public var isEditable: Swift.Bool {
+    get
+  }
+  public var frame: CoreGraphics.CGRect
+  public var transform: CoreGraphics.CGAffineTransform
+  public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
+  public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
+  public init(id: Swift.String, image: UIKit.UIImage, title: Swift.String, font: UIKit.UIFont, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+public class InteractivePoll : BanubaOverlayEditorSDK.OverlayItem {
+  public var id: Swift.String
+  public var image: UIKit.UIImage
+  public var startTime: CoreMedia.CMTime
+  public var endTime: CoreMedia.CMTime
+  public var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle {
+    get
+  }
+  public var isEditable: Swift.Bool {
+    get
+  }
+  public var titleText: Swift.String
+  public var leftCardText: Swift.String
+  public var rightCardText: Swift.String
+  public var frame: CoreGraphics.CGRect
+  public var transform: CoreGraphics.CGAffineTransform
+  public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
+  public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
+  public init(id: Swift.String, image: UIKit.UIImage, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, title: Swift.String, leftCardText: Swift.String, rightCardText: Swift.String, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+public protocol OverlayItemConsumable : UIKit.UIViewController {
+  func getExistingOverlayItems() -> [BanubaOverlayEditorSDK.OverlayItem]
+  func addOverlayItem(_ overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+  func updateOverlayItem(_ overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+  func updateOverlayItemOrder(_ overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+  func removeOverlayItem(_ overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+  func moveOverlayItem(_ overlayItem: BanubaOverlayEditorSDK.OverlayItem)
+}
+public protocol OverlayItemDisplayable : BanubaOverlayEditorSDK.OverlayItemConsumable {
+  var needsToSelectOverlayItemLineView: ((Swift.String) -> Swift.Void)? { get set }
+  var needsToSetupStateOverlayItem: ((Swift.String) -> Swift.Void)? { get set }
+  func hideOverlayItems()
+  func showOverlayItems()
+  func reloadOverlayItems()
+  func didVideoPlay(atTime time: CoreMedia.CMTime)
+  func deselectAllOverlayItems()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InteractiveTestViewController : UIKit.UIViewController, BanubaOverlayEditorSDK.OverlayItemProducibleViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: BanubaOverlayEditorSDK.OverlayItemProducibleViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension BanubaOverlayEditorSDK.InteractiveTestViewController : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+}
+public class EditorQuestion : BanubaOverlayEditorSDK.OverlayItem {
+  public var id: Swift.String
+  public var text: Swift.String
+  public var color: BanubaOverlayEditorSDK.GradientColorPair
+  public var image: UIKit.UIImage
+  public var startTime: CoreMedia.CMTime
+  public var endTime: CoreMedia.CMTime
+  public var presentationStyle: BanubaOverlayEditorSDK.OverlayItemPresentationStyle {
+    get
+  }
+  public var isEditable: Swift.Bool {
+    get
+  }
+  public var frame: CoreGraphics.CGRect
+  public var transform: CoreGraphics.CGAffineTransform
+  public var type: BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type`?
+  public var position: BanubaOverlayEditorSDK.OverlayItemLinePosition?
+  public var order: Swift.Int
+  public init(id: Swift.String, text: Swift.String, color: BanubaOverlayEditorSDK.GradientColorPair, image: UIKit.UIImage, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, frame: CoreGraphics.CGRect = .zero, transform: CoreGraphics.CGAffineTransform = .identity, order: Swift.Int)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+extension BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type` : Swift.Equatable {}
+extension BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type` : Swift.Hashable {}
+extension BanubaOverlayEditorSDK.OverlayAddButtonConfig.`Type` : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "OverlayAddButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditorEditButtonConfig.`Type` : Swift.Equatable {}
+@available(*, unavailable, renamed: "OverlayAddButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditorEditButtonConfig.`Type` : Swift.Hashable {}
+@available(*, unavailable, renamed: "OverlayAddButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditorEditButtonConfig.`Type` : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "OverlayEditButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditCompositionButtonConfig.`Type` : Swift.Equatable {}
+@available(*, unavailable, renamed: "OverlayEditButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditCompositionButtonConfig.`Type` : Swift.Hashable {}
+@available(*, unavailable, renamed: "OverlayEditButtonConfig")
+extension BanubaOverlayEditorSDK.OverlayEditCompositionButtonConfig.`Type` : Swift.RawRepresentable {}
+extension BanubaOverlayEditorSDK.OverlayEditButtonConfig.`Type` : Swift.Equatable {}
+extension BanubaOverlayEditorSDK.OverlayEditButtonConfig.`Type` : Swift.Hashable {}
+extension BanubaOverlayEditorSDK.OverlayEditButtonConfig.`Type` : Swift.RawRepresentable {}
+extension BanubaOverlayEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Equatable {}
+extension BanubaOverlayEditorSDK.OverlayControlButtonConfig.`Type` : Swift.Hashable {}
+extension BanubaOverlayEditorSDK.OverlayControlButtonConfig.`Type` : Swift.RawRepresentable {}
+extension BanubaOverlayEditorSDK.VideoEditorInteractiveType : Swift.Equatable {}
+extension BanubaOverlayEditorSDK.VideoEditorInteractiveType : Swift.Hashable {}

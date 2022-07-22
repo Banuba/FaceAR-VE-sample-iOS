@@ -1,0 +1,11 @@
+framework module BanubaMusicEditorSDK {
+  umbrella header "BanubaMusicEditorSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BanubaMusicEditorSDK.Swift {
+    header "BanubaMusicEditorSDK-Swift.h"
+    requires objc
+}

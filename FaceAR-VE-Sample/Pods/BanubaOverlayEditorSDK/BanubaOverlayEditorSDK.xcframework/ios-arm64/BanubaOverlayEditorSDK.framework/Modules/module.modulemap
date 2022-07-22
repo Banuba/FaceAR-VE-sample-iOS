@@ -1,0 +1,11 @@
+framework module BanubaOverlayEditorSDK {
+  umbrella header "BanubaOverlayEditorSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BanubaOverlayEditorSDK.Swift {
+    header "BanubaOverlayEditorSDK-Swift.h"
+    requires objc
+}

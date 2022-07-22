@@ -1,0 +1,6 @@
+framework module Pods_FaceAR_VE_Sample {
+  umbrella header "Pods-FaceAR-VE-Sample-umbrella.h"
+
+  export *
+  module * { export * }
+}

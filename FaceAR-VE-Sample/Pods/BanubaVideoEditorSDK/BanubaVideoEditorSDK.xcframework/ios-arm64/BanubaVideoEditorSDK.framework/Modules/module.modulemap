@@ -1,0 +1,11 @@
+framework module BanubaVideoEditorSDK {
+  umbrella header "BanubaVideoEditorSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BanubaVideoEditorSDK.Swift {
+    header "BanubaVideoEditorSDK-Swift.h"
+    requires objc
+}
