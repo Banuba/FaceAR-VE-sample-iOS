@@ -38,7 +38,7 @@ class FaceARViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     sdkManager?.input.startCamera()
-    sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+    _ = sdkManager?.loadEffect("AsaiLines", synchronous: true)
     sdkManager?.startEffectPlayer()
   }
   
@@ -57,11 +57,6 @@ extension FaceARViewController {
 // MARK:- Video Editor Helpers
 extension FaceARViewController {
   private func createVideoEditorSDK() {
-    BanubaSdkManager.deinitialize()
-    
-    sdkManager?.destroyEffectPlayer()
-    sdkManager = nil
-    
     videoEditorSDK = BanubaVideoEditor(
       token: banubaClientToken,
       configuration: VideoEditorConfig(),
@@ -71,6 +66,10 @@ extension FaceARViewController {
   }
   
   private func presentVideoEditorSDK() {
+    sdkManager?.destroy()
+    sdkManager?.destroyEffectPlayer()
+    sdkManager = nil
+    
     createVideoEditorSDK()
     
     let launchConfig = VideoEditorLaunchConfig(
@@ -109,6 +108,7 @@ extension FaceARViewController {
     startActivity()
     videoEditorSDK?.export(
       using: exportConfiguration,
+      exportProgress: { progress in debugPrint("export progress \(progress)") },
       completion: { [weak self] success, error, exportCoverImages in
         DispatchQueue.main.async {
           self?.stopActivity()
@@ -223,7 +223,7 @@ extension FaceARViewController {
       self.setUpRenderSize()
       
       self.sdkManager?.input.startCamera()
-      self.sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
+      _ = self.sdkManager?.loadEffect("AsaiLines", synchronous: true)
       self.sdkManager?.startEffectPlayer()
     }
   }
@@ -235,7 +235,7 @@ extension FaceARViewController {
   }
   
   private func setUpRenderTarget() {
-    guard let effectView = self.effectPlayerView?.layer as? CAEAGLLayer else { return }
+    guard let effectView = self.effectPlayerView?.layer as? CAMetalLayer else { return }
     sdkManager?.setRenderTarget(layer: effectView, playerConfiguration: nil)
     sdkManager?.startEffectPlayer()
   }
