@@ -40,7 +40,6 @@ class FaceARViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     sdkManager?.input.startCamera()
-    _ = sdkManager?.loadEffect(Defaults.effectName, synchronous: true)
     sdkManager?.startEffectPlayer()
   }
 }
@@ -49,6 +48,10 @@ class FaceARViewController: UIViewController {
 extension FaceARViewController {
   @IBAction func videoEditorButtonAction(_ sender: Any) {
     presentVideoEditorSDK()
+  }
+  
+  @IBAction func applyEffectAction(_ sender: UIButton) {
+    _ = sdkManager?.loadEffect(Defaults.effectName, synchronous: true)
   }
 }
 
@@ -213,7 +216,6 @@ extension FaceARViewController {
       self.sdkManager?.setup(configuration: self.config)
       self.setUpRenderTarget()
       self.sdkManager?.input.startCamera()
-      _ = self.sdkManager?.loadEffect(Defaults.effectName, synchronous: true)
       self.sdkManager?.startEffectPlayer()
     }
   }
