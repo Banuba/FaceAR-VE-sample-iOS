@@ -7,10 +7,12 @@
 
 import UIKit
 import BanubaSdk
-import BanubaVideoEditorSDK
-import BanubaUtilities
-import VideoEditor
 import VEExportSDK
+import BanubaVideoEditorSDK
+
+private struct Defaults {
+  static let effectName: String = "AsaiLines"
+}
 
 class FaceARViewController: UIViewController {
   
@@ -32,56 +34,50 @@ class FaceARViewController: UIViewController {
     super.viewDidLoad()
     setupEffectPlayerView()
     sdkManager?.setup(configuration: config)
-    setUpRenderSize()
+    setUpRenderTarget()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     sdkManager?.input.startCamera()
-    sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
     sdkManager?.startEffectPlayer()
-  }
-  
-  deinit {
-    sdkManager?.destroyEffectPlayer()
   }
 }
 
-//MARK:- IBActions
+// MARK: - IBActions
 extension FaceARViewController {
   @IBAction func videoEditorButtonAction(_ sender: Any) {
     presentVideoEditorSDK()
   }
+  
+  @IBAction func applyEffectAction(_ sender: UIButton) {
+    _ = sdkManager?.loadEffect(Defaults.effectName, synchronous: true)
+  }
 }
 
-// MARK:- Video Editor Helpers
+// MARK: - Video Editor Helpers
 extension FaceARViewController {
-  private func createVideoEditorSDK() {
-    BanubaSdkManager.deinitialize()
-    
-    sdkManager?.destroyEffectPlayer()
-    sdkManager = nil
-    
-    videoEditorSDK = BanubaVideoEditor(
-      token: banubaClientToken,
-      configuration: VideoEditorConfig(),
-      externalViewControllerFactory: nil
-    )
-    videoEditorSDK?.delegate = self
-  }
-  
   private func presentVideoEditorSDK() {
-    createVideoEditorSDK()
-    
-    let launchConfig = VideoEditorLaunchConfig(
-      entryPoint: .camera,
-      hostController: self,
-      animated: true
-    )
-    videoEditorSDK?.presentVideoEditor(
-      withLaunchConfiguration: launchConfig,
-      completion: nil
-    )
+    destroyEffectPlayer { [weak self] in
+      guard let self = self else { return }
+      
+      videoEditorSDK = BanubaVideoEditor(
+        token: banubaClientToken,
+        configuration: VideoEditorConfig(),
+        externalViewControllerFactory: nil
+      )
+      videoEditorSDK?.delegate = self
+      
+      let launchConfig = VideoEditorLaunchConfig(
+        entryPoint: .camera,
+        hostController: self,
+        animated: true
+      )
+      videoEditorSDK?.presentVideoEditor(
+        withLaunchConfiguration: launchConfig,
+        completion: nil
+      )
+    }
   }
   
   private func exportVideo() {
@@ -109,6 +105,7 @@ extension FaceARViewController {
     startActivity()
     videoEditorSDK?.export(
       using: exportConfiguration,
+      exportProgress: { progress in debugPrint("export progress \(progress)") },
       completion: { [weak self] success, error, exportCoverImages in
         DispatchQueue.main.async {
           self?.stopActivity()
@@ -129,15 +126,12 @@ extension FaceARViewController {
       applicationActivities: nil
     )
       
-    controller.completionWithItemsHandler = { _, _, _, _ in
-      self.videoEditorSDK = nil
-      self.reloadSdkManager()
+    controller.completionWithItemsHandler = { [weak self] _, _, _, _ in
+      self?.videoEditorSDK = nil
+      self?.reloadSdkManager()
     }
     
-    present(
-      controller,
-      animated: true
-    ) {
+    present(controller, animated: true) {
       self.videoEditorSDK?.clearSessionData()
     }
   }
@@ -182,12 +176,13 @@ extension FaceARViewController {
         if visible == false {
           self.activityView.removeFromSuperview()
         }
-      })
+      }
+    )
   }
 }
 
 
-//MARK:- Video Editor Delegate
+// MARK: - Video Editor Delegate
 extension FaceARViewController: BanubaVideoEditorDelegate {
   func videoEditorDidCancel(_ videoEditor: BanubaVideoEditor) {
     videoEditor.dismissVideoEditor(
@@ -207,23 +202,20 @@ extension FaceARViewController: BanubaVideoEditorDelegate {
   }
 }
 
-//MARK: - Face AR Helpers
+// MARK: - Face AR Helpers
 extension FaceARViewController {
   private func reloadSdkManager() {
-    BanubaSdkManager.initialize(
-      resourcePath: [Bundle.main.bundlePath + "/effects"],
-      clientTokenString: banubaClientToken,
-      logLevel: .info
-    )
-    
-    sdkManager = BanubaSdkManager()
-    sdkManager?.setup(configuration: config)
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-      self.setUpRenderSize()
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) { [weak self] in
+      guard let self = self else { return }
+      BanubaSdkManager.initialize(
+        resourcePath: [Bundle.main.bundlePath + "/effects"],
+        clientTokenString: banubaClientToken
+      )
       
+      self.sdkManager = BanubaSdkManager()
+      self.sdkManager?.setup(configuration: self.config)
+      self.setUpRenderTarget()
       self.sdkManager?.input.startCamera()
-      self.sdkManager?.loadEffect("UnluckyWitch", synchronous: true)
       self.sdkManager?.startEffectPlayer()
     }
   }
@@ -235,31 +227,19 @@ extension FaceARViewController {
   }
   
   private func setUpRenderTarget() {
-    guard let effectView = self.effectPlayerView?.layer as? CAEAGLLayer else { return }
-    sdkManager?.setRenderTarget(layer: effectView, playerConfiguration: nil)
-    sdkManager?.startEffectPlayer()
+    config.orientation = .deg90
+    config.renderSize = CGSize(width: 720, height: 1280)
+    if let effectLayer = self.effectPlayerView?.layer as? CAMetalLayer {
+      sdkManager?.setRenderTarget(layer: effectLayer, playerConfiguration: nil)
+      sdkManager?.startEffectPlayer()
+    }
   }
   
-  private func setUpRenderSize() {
-    switch UIApplication.shared.statusBarOrientation {
-    case .portrait:
-      config.orientation = .deg90
-      config.renderSize = CGSize(width: 720, height: 1280)
-      setUpRenderTarget()
-    case .portraitUpsideDown:
-      config.orientation = .deg270
-      config.renderSize = CGSize(width: 720, height: 1280)
-      setUpRenderTarget()
-    case .landscapeLeft:
-      config.orientation = .deg180
-      config.renderSize = CGSize(width: 1280, height: 720)
-      setUpRenderTarget()
-    case .landscapeRight:
-      config.orientation = .deg0
-      config.renderSize = CGSize(width: 1280, height: 720)
-      setUpRenderTarget()
-    default:
-      setUpRenderTarget()
-    }
+  private func destroyEffectPlayer(completion: () -> Void) {
+    defer { completion() }
+    
+    sdkManager?.destroyEffectPlayer()
+    BanubaSdkManager.deinitialize()
+    sdkManager = nil
   }
 }

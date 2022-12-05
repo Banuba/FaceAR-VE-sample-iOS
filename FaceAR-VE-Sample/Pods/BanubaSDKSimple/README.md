@@ -1,1 +1,0 @@
-# BanubaSDKSimple-IOS

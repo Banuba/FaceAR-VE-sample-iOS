@@ -1,2 +1,0 @@
-# BanubaVideoEditorSDK-iOS
-BanubaVideoEditorSDK-iOS

@@ -1,2 +1,0 @@
-# BanubaMusicEditorSDK-iOS
-BanubaMusicEditorSDK-iOS
