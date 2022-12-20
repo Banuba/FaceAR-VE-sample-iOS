@@ -62,7 +62,7 @@ extension FaceARViewController {
       guard let self = self else { return }
       
       videoEditorSDK = BanubaVideoEditor(
-        token: banubaClientToken,
+        token: AppDelegate.licenseToken,
         configuration: VideoEditorConfig(),
         externalViewControllerFactory: nil
       )
@@ -209,7 +209,7 @@ extension FaceARViewController {
       guard let self = self else { return }
       BanubaSdkManager.initialize(
         resourcePath: [Bundle.main.bundlePath + "/effects"],
-        clientTokenString: banubaClientToken
+        clientTokenString: AppDelegate.licenseToken
       )
       
       self.sdkManager = BanubaSdkManager()

@@ -10,7 +10,6 @@
 		3005A832DE054601013E39C6 /* Pods_FaceAR_VE_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */; };
 		8A828F3D2727FFBC00639C56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A828F3F2727FFBC00639C56 /* Localizable.strings */; };
 		8AB40EA125D52C36002A871F /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EA025D52C36002A871F /* effects */; };
-		8AB40EA425D52CCF002A871F /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */; };
 		8AB40EBD25D5334A002A871F /* bundleEffects in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EBB25D5334A002A871F /* bundleEffects */; };
 		8AB40EBE25D5334A002A871F /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 8AB40EBC25D5334A002A871F /* luts */; };
 		8ABEFDB025D2C66F00C0B02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */; };
@@ -36,7 +35,6 @@
 		8A828F3E2727FFBC00639C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A828F402727FFC900639C56 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AB40EA025D52C36002A871F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
-		8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
 		8AB40EBB25D5334A002A871F /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8AB40EBC25D5334A002A871F /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		8ABEFDAC25D2C66F00C0B02F /* FaceAR-VE-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceAR-VE-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +112,6 @@
 				8AB40EBB25D5334A002A871F /* bundleEffects */,
 				8AB40EA025D52C36002A871F /* effects */,
 				8AB40EBC25D5334A002A871F /* luts */,
-				8AB40EA325D52CCF002A871F /* BanubaClientToken.swift */,
 				8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */,
 				8ABEFDB325D2C66F00C0B02F /* ViewController.swift */,
 				8ABEFDB525D2C66F00C0B02F /* Main.storyboard */,
@@ -263,7 +260,6 @@
 			files = (
 				8ABEFDB425D2C66F00C0B02F /* ViewController.swift in Sources */,
 				8ABEFDB025D2C66F00C0B02F /* AppDelegate.swift in Sources */,
-				8AB40EA425D52CCF002A871F /* BanubaClientToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
