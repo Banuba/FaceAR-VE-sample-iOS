@@ -2,27 +2,28 @@ source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks!
+banuba_sdk_version = '1.25.1'
 
 target 'FaceAR-VE-Sample' do
-  pod 'BanubaARCloudSDK', '1.25.0' #optional
-  pod 'BanubaVideoEditorSDK', '1.25.0'
-  pod 'BanubaAudioBrowserSDK', '1.25.0' #optional
-  pod 'BanubaMusicEditorSDK', '1.25.0'
-  pod 'BanubaOverlayEditorSDK', '1.25.0'
+  pod 'BanubaARCloudSDK', banuba_sdk_version #optional
+  pod 'BanubaVideoEditorSDK', banuba_sdk_version
+  pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
+  pod 'BanubaMusicEditorSDK', banuba_sdk_version
+  pod 'BanubaOverlayEditorSDK', banuba_sdk_version
   pod 'BanubaEffectPlayer', '1.25.0' #optional
-  pod 'BanubaSDK', '1.25.0' #optional
-  pod 'BanubaSDKSimple', '1.25.0'
-  pod 'BanubaSDKServicing', '1.25.0'
-  pod 'VideoEditor', '1.25.0'
-  pod 'BanubaUtilities', '1.25.0'
-  pod 'BanubaVideoEditorGallerySDK', '1.25.0' #optional
-  pod 'BanubaLicenseServicingSDK', '1.25.0'
-  pod 'BanubaVideoEditorTrimSDK', '1.25.0'
-  pod 'BanubaTokenStorageSDK', '1.25.0' #optional
+  pod 'BanubaSDK', banuba_sdk_version
+  pod 'BanubaSDKSimple', banuba_sdk_version
+  pod 'BanubaSDKServicing', banuba_sdk_version
+  pod 'VideoEditor', banuba_sdk_version
+  pod 'BanubaUtilities', banuba_sdk_version
+  pod 'BanubaVideoEditorGallerySDK', banuba_sdk_version #optional
+  pod 'BanubaLicenseServicingSDK', banuba_sdk_version
+  pod 'BanubaVideoEditorTrimSDK', banuba_sdk_version
+  pod 'BanubaTokenStorageSDK', banuba_sdk_version #optional
 
-  pod 'VEPlaybackSDK', '1.25.0'
-  pod 'VEEffectsSDK', '1.25.0'
-  pod 'VEExportSDK', '1.25.0'
+  pod 'VEPlaybackSDK', banuba_sdk_version
+  pod 'VEEffectsSDK', banuba_sdk_version
+  pod 'VEExportSDK', banuba_sdk_version
 
   pod 'BNBLicenseUtils', '1.24.0'
 end
