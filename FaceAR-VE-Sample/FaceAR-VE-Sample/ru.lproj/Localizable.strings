@@ -346,6 +346,9 @@
 /* VHS 2 effect name */
 "com.banuba.editor.effect.name.vhs2" = "VHS 2";
 
+/* Twitch effect name */
+"com.banuba.editor.effect.name.twitch" = "Twitch";
+
 // MARK: - Filter names
 
 /* glitch filter name */
