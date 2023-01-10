@@ -1,8 +1,8 @@
 source 'https://github.com/Banuba/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
-banuba_sdk_version = '1.25.1'
+banuba_sdk_version = '1.25.2'
 
 target 'FaceAR-VE-Sample' do
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
@@ -10,7 +10,7 @@ target 'FaceAR-VE-Sample' do
   pod 'BanubaAudioBrowserSDK', banuba_sdk_version #optional
   pod 'BanubaMusicEditorSDK', banuba_sdk_version
   pod 'BanubaOverlayEditorSDK', banuba_sdk_version
-  pod 'BanubaEffectPlayer', '1.25.0' #optional
+  pod 'BanubaEffectPlayer', banuba_sdk_version #optional
   pod 'BanubaSDK', banuba_sdk_version
   pod 'BanubaSDKSimple', banuba_sdk_version
   pod 'BanubaSDKServicing', banuba_sdk_version
@@ -25,5 +25,5 @@ target 'FaceAR-VE-Sample' do
   pod 'VEEffectsSDK', banuba_sdk_version
   pod 'VEExportSDK', banuba_sdk_version
 
-  pod 'BNBLicenseUtils', '1.24.0'
+  pod 'BNBLicenseUtils', banuba_sdk_version
 end
