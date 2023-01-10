@@ -734,6 +734,10 @@
 "com.banuba.videoEditor.aspect.4:3" = "4:3";
 "com.banuba.videoEditor.aspect.4:5" = "4:5";
 
+/* Recorder video duration */
+"com.banuba.recorder.secondsFormat" = "%d сек";
+"com.banuba.recorder.minutesFormat" = "%d мин";
+
 /* Text editor font names */
 "com.banuba.textEditor.fontName.regular" = "Обычный";
 "com.banuba.textEditor.fontName.italic" = "Курсив";
