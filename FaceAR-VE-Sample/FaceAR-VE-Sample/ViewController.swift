@@ -67,16 +67,21 @@ extension FaceARViewController {
         externalViewControllerFactory: nil
       )
       videoEditorSDK?.delegate = self
-      
-      let launchConfig = VideoEditorLaunchConfig(
-        entryPoint: .camera,
-        hostController: self,
-        animated: true
-      )
-      videoEditorSDK?.presentVideoEditor(
-        withLaunchConfiguration: launchConfig,
-        completion: nil
-      )
+      videoEditorSDK?.getLicenseState(completion: { isValid in
+        guard isValid else {
+          self.showAlert(message: "Your token is either revoked or expired")
+          return
+        }
+        let launchConfig = VideoEditorLaunchConfig(
+          entryPoint: .camera,
+          hostController: self,
+          animated: true
+        )
+        self.videoEditorSDK?.presentVideoEditor(
+          withLaunchConfiguration: launchConfig,
+          completion: nil
+        )
+      })
     }
   }
   
@@ -118,6 +123,12 @@ extension FaceARViewController {
         }
       }
     )
+  }
+  
+  func showAlert(message: String) {
+    let vc = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+    vc.addAction(.init(title: "OK", style: .cancel))
+    present(vc, animated: true)
   }
   
   func shareResultVideo(urls: [URL]) {
@@ -205,19 +216,15 @@ extension FaceARViewController: BanubaVideoEditorDelegate {
 // MARK: - Face AR Helpers
 extension FaceARViewController {
   private func reloadSdkManager() {
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) { [weak self] in
-      guard let self = self else { return }
-      BanubaSdkManager.initialize(
-        resourcePath: [Bundle.main.bundlePath + "/effects"],
-        clientTokenString: AppDelegate.licenseToken
-      )
-      
-      self.sdkManager = BanubaSdkManager()
-      self.sdkManager?.setup(configuration: self.config)
-      self.setUpRenderTarget()
-      self.sdkManager?.input.startCamera()
-      self.sdkManager?.startEffectPlayer()
-    }
+    BanubaSdkManager.initialize(
+      resourcePath: [Bundle.main.bundlePath + "/effects"],
+      clientTokenString: AppDelegate.licenseToken
+    )
+    sdkManager = BanubaSdkManager()
+    sdkManager?.setup(configuration: self.config)
+    setUpRenderTarget()
+    sdkManager?.input.startCamera()
+    sdkManager?.startEffectPlayer()
   }
   
   private func setupEffectPlayerView() {
