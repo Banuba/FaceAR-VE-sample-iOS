@@ -39,7 +39,7 @@
 		8AB40EBC25D5334A002A871F /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		8ABEFDAC25D2C66F00C0B02F /* FaceAR-VE-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceAR-VE-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABEFDAF25D2C66F00C0B02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8ABEFDB325D2C66F00C0B02F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8ABEFDB325D2C66F00C0B02F /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		8ABEFDB625D2C66F00C0B02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ABEFDB825D2C67000C0B02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ABEFDBB25D2C67000C0B02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,6 +156,7 @@
 				TargetAttributes = {
 					8ABEFDAB25D2C66F00C0B02F = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -418,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
 				ENABLE_BITCODE = NO;
@@ -429,6 +431,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.banuba.FaceAR-VE-Sample.FaceAR-VE-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8W9QCBMQCU;
 				ENABLE_BITCODE = NO;
