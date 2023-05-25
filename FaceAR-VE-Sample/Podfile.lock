@@ -1,42 +1,42 @@
 PODS:
-  - BanubaARCloudSDK (1.26.4)
-  - BanubaAudioBrowserSDK (1.26.4)
-  - BanubaEffectPlayer (1.26.4)
-  - BanubaLicenseServicingSDK (1.26.4)
-  - BanubaMusicEditorSDK (1.26.4)
-  - BanubaOverlayEditorSDK (1.26.4)
-  - BanubaSDK (1.26.4)
-  - BanubaSDKServicing (1.26.4)
-  - BanubaSDKSimple (1.26.4)
-  - BanubaUtilities (1.26.4)
-  - BanubaVideoEditorGallerySDK (1.26.4)
-  - BanubaVideoEditorSDK (1.26.4)
-  - BanubaVideoEditorTrimSDK (1.26.4)
-  - BNBLicenseUtils (1.26.4)
-  - VEEffectsSDK (1.26.4)
-  - VEExportSDK (1.26.4)
-  - VEPlaybackSDK (1.26.4)
-  - VideoEditor (1.26.4)
+  - BanubaARCloudSDK (1.26.7)
+  - BanubaAudioBrowserSDK (1.26.7)
+  - BanubaEffectPlayer (1.26.7)
+  - BanubaLicenseServicingSDK (1.26.7)
+  - BanubaMusicEditorSDK (1.26.7)
+  - BanubaOverlayEditorSDK (1.26.7)
+  - BanubaSDK (1.26.7)
+  - BanubaSDKServicing (1.26.7)
+  - BanubaSDKSimple (1.26.7)
+  - BanubaUtilities (1.26.7)
+  - BanubaVideoEditorGallerySDK (1.26.7)
+  - BanubaVideoEditorSDK (1.26.7)
+  - BanubaVideoEditorTrimSDK (1.26.7)
+  - BNBLicenseUtils (1.26.7)
+  - VEEffectsSDK (1.26.7)
+  - VEExportSDK (1.26.7)
+  - VEPlaybackSDK (1.26.7)
+  - VideoEditor (1.26.7)
 
 DEPENDENCIES:
-  - BanubaARCloudSDK (= 1.26.4)
-  - BanubaAudioBrowserSDK (= 1.26.4)
-  - BanubaEffectPlayer (= 1.26.4)
-  - BanubaLicenseServicingSDK (= 1.26.4)
-  - BanubaMusicEditorSDK (= 1.26.4)
-  - BanubaOverlayEditorSDK (= 1.26.4)
-  - BanubaSDK (= 1.26.4)
-  - BanubaSDKServicing (= 1.26.4)
-  - BanubaSDKSimple (= 1.26.4)
-  - BanubaUtilities (= 1.26.4)
-  - BanubaVideoEditorGallerySDK (= 1.26.4)
-  - BanubaVideoEditorSDK (= 1.26.4)
-  - BanubaVideoEditorTrimSDK (= 1.26.4)
-  - BNBLicenseUtils (= 1.26.4)
-  - VEEffectsSDK (= 1.26.4)
-  - VEExportSDK (= 1.26.4)
-  - VEPlaybackSDK (= 1.26.4)
-  - VideoEditor (= 1.26.4)
+  - BanubaARCloudSDK (= 1.26.7)
+  - BanubaAudioBrowserSDK (= 1.26.7)
+  - BanubaEffectPlayer (= 1.26.7)
+  - BanubaLicenseServicingSDK (= 1.26.7)
+  - BanubaMusicEditorSDK (= 1.26.7)
+  - BanubaOverlayEditorSDK (= 1.26.7)
+  - BanubaSDK (= 1.26.7)
+  - BanubaSDKServicing (= 1.26.7)
+  - BanubaSDKSimple (= 1.26.7)
+  - BanubaUtilities (= 1.26.7)
+  - BanubaVideoEditorGallerySDK (= 1.26.7)
+  - BanubaVideoEditorSDK (= 1.26.7)
+  - BanubaVideoEditorTrimSDK (= 1.26.7)
+  - BNBLicenseUtils (= 1.26.7)
+  - VEEffectsSDK (= 1.26.7)
+  - VEExportSDK (= 1.26.7)
+  - VEPlaybackSDK (= 1.26.7)
+  - VideoEditor (= 1.26.7)
 
 SPEC REPOS:
   https://github.com/Banuba/specs.git:
@@ -60,25 +60,25 @@ SPEC REPOS:
     - VideoEditor
 
 SPEC CHECKSUMS:
-  BanubaARCloudSDK: 31e043322ac9d60ac0e29f3e578daf750bac4661
-  BanubaAudioBrowserSDK: 41c107e05df3d587bc2973c4f5384b991f674f72
-  BanubaEffectPlayer: dded82c0701697b2b080a76eceb47dc81a28e822
-  BanubaLicenseServicingSDK: 6f6b4c6afbd6b1273e226cbd92ba72cb54ebdf1a
-  BanubaMusicEditorSDK: e08a9f2021c0d9ec2a677f8e07a67a66bc6e7fb4
-  BanubaOverlayEditorSDK: 2dc8e99c00c3f986c6ca3dfdade74cdcf6ba6979
-  BanubaSDK: eaef15cca648e7e79b1336779c7f743d65fea724
-  BanubaSDKServicing: 08d253792529822d25e11430139edb5b81f3b34c
-  BanubaSDKSimple: b3453b7fb3d95f2aee28acd8d3b8903d770074a1
-  BanubaUtilities: 1b49e0e75f37d3e6f8372a4907c778872a483555
-  BanubaVideoEditorGallerySDK: ce681970c888db60589ac322424b2a9188eab814
-  BanubaVideoEditorSDK: add12d7b96deaa10d3a4a6879f89ffd754d080b2
-  BanubaVideoEditorTrimSDK: a874abdbf6d4885a173cce9711a883df2cf1f0c6
-  BNBLicenseUtils: 33a6eedbd93a30666dc3a899a59bd2df9149f97f
-  VEEffectsSDK: db302bf80bef6f11a566d769f6aab06b1cfe0a7a
-  VEExportSDK: d0f09ffbd29c7512a6946017f2f9567efc00da18
-  VEPlaybackSDK: 473d0ca2b0ee104432686afc86c95f4be1f97bfc
-  VideoEditor: 8e30a6641cd49cc7d1af660cd4ab79459846e828
+  BanubaARCloudSDK: 9fd1766cbfd5b6fd2828d191c23c246d5c71d2a6
+  BanubaAudioBrowserSDK: 49409b88ba9c4e336a3b1d0e812d480cc57ab949
+  BanubaEffectPlayer: fde107dc128130ee2c2ef6201b270e50ef5ccc89
+  BanubaLicenseServicingSDK: 2affb16e9c6155478960c502ba66173d5f8fb727
+  BanubaMusicEditorSDK: 41918819a75c4c6363f33ce44eb83c2e8ebf7e49
+  BanubaOverlayEditorSDK: 41cab166d5f13c794e048dc1905611afae85945f
+  BanubaSDK: 3e013c47ef85b70a6c213e6960ca52b9fcfc9a3b
+  BanubaSDKServicing: ff15b75b54eb65c4cdd73a585835ea92d10ebc66
+  BanubaSDKSimple: fd28963e6c854594fbe4d2dfd7ffbb86c5fd838c
+  BanubaUtilities: 5f575dcfa7e68ea8b40476453e02fff67a94c111
+  BanubaVideoEditorGallerySDK: ec833d079ffdfd9cc1056f76e72a45d39f5daa30
+  BanubaVideoEditorSDK: c71760a011e52444ecbec2bcc26f10708b081c30
+  BanubaVideoEditorTrimSDK: 309d51d8712cfb5ad2fc60f1b072994fb4dbcacc
+  BNBLicenseUtils: a7b6510cf4ca4f766c76e2e28099dc8a768cfb98
+  VEEffectsSDK: d627e33b0a72819ec27940e61813b8dbeec6919d
+  VEExportSDK: 68119e5eac1ea99778b2bc93423fd1713ce84050
+  VEPlaybackSDK: 4aa9dd1a44d5d5a59823fbb1c0a1148a70ae05fd
+  VideoEditor: e01ef9442a6ddb66e966d2b6ed83cee9b3a9b45a
 
-PODFILE CHECKSUM: 1d22dc9847e28de320c766375cefa178aca3d848
+PODFILE CHECKSUM: 477ff27b793b0f8d2eec93bf79617c95f5868fdd
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
