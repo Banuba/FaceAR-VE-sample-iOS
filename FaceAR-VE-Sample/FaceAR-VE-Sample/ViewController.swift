@@ -111,10 +111,10 @@ extension FaceARViewController {
     videoEditorSDK?.export(
       using: exportConfiguration,
       exportProgress: { progress in debugPrint("export progress \(progress)") },
-      completion: { [weak self] success, error, exportCoverImages in
+      completion: { [weak self] error, exportCoverImages in
         DispatchQueue.main.async {
           self?.stopActivity()
-          if success {
+          if error == nil {
             self?.shareResultVideo(urls: [fileURL])
           } else {
             self?.videoEditorSDK = nil
