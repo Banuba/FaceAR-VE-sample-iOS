@@ -1,36 +1,36 @@
 PODS:
-  - BanubaARCloudSDK (1.30.1)
-  - BanubaAudioBrowserSDK (1.30.1)
-  - BanubaEffectPlayer (1.30.1)
-  - BanubaLicenseServicingSDK (1.30.1)
-  - BanubaSDK (1.30.1)
-  - BanubaSDKServicing (1.30.1)
-  - BanubaSDKSimple (1.30.1)
-  - BanubaUtilities (1.30.1)
-  - BanubaVideoEditorGallerySDK (1.30.1)
-  - BanubaVideoEditorSDK (1.30.1)
-  - BNBLicenseUtils (1.30.1)
-  - VEEffectsSDK (1.30.1)
-  - VEExportSDK (1.30.1)
-  - VEPlaybackSDK (1.30.1)
-  - VideoEditor (1.30.1)
+  - BanubaARCloudSDK (1.31.0)
+  - BanubaAudioBrowserSDK (1.31.0)
+  - BanubaEffectPlayer (1.31.0)
+  - BanubaLicenseServicingSDK (1.31.0)
+  - BanubaSDK (1.31.0)
+  - BanubaSDKServicing (1.31.0)
+  - BanubaSDKSimple (1.31.0)
+  - BanubaUtilities (1.31.0)
+  - BanubaVideoEditorGallerySDK (1.31.0)
+  - BanubaVideoEditorSDK (1.31.0)
+  - BNBLicenseUtils (1.31.0)
+  - VEEffectsSDK (1.31.0)
+  - VEExportSDK (1.31.0)
+  - VEPlaybackSDK (1.31.0)
+  - VideoEditor (1.31.0)
 
 DEPENDENCIES:
-  - BanubaARCloudSDK (= 1.30.1)
-  - BanubaAudioBrowserSDK (= 1.30.1)
-  - BanubaEffectPlayer (= 1.30.1)
-  - BanubaLicenseServicingSDK (= 1.30.1)
-  - BanubaSDK (= 1.30.1)
-  - BanubaSDKServicing (= 1.30.1)
-  - BanubaSDKSimple (= 1.30.1)
-  - BanubaUtilities (= 1.30.1)
-  - BanubaVideoEditorGallerySDK (= 1.30.1)
-  - BanubaVideoEditorSDK (= 1.30.1)
-  - BNBLicenseUtils (= 1.30.1)
-  - VEEffectsSDK (= 1.30.1)
-  - VEExportSDK (= 1.30.1)
-  - VEPlaybackSDK (= 1.30.1)
-  - VideoEditor (= 1.30.1)
+  - BanubaARCloudSDK (= 1.31.0)
+  - BanubaAudioBrowserSDK (= 1.31.0)
+  - BanubaEffectPlayer (= 1.31.0)
+  - BanubaLicenseServicingSDK (= 1.31.0)
+  - BanubaSDK (= 1.31.0)
+  - BanubaSDKServicing (= 1.31.0)
+  - BanubaSDKSimple (= 1.31.0)
+  - BanubaUtilities (= 1.31.0)
+  - BanubaVideoEditorGallerySDK (= 1.31.0)
+  - BanubaVideoEditorSDK (= 1.31.0)
+  - BNBLicenseUtils (= 1.31.0)
+  - VEEffectsSDK (= 1.31.0)
+  - VEExportSDK (= 1.31.0)
+  - VEPlaybackSDK (= 1.31.0)
+  - VideoEditor (= 1.31.0)
 
 SPEC REPOS:
   https://github.com/Banuba/specs.git:
@@ -51,22 +51,22 @@ SPEC REPOS:
     - VideoEditor
 
 SPEC CHECKSUMS:
-  BanubaARCloudSDK: 80b83687e174d03bebcfeb4432666076af61f850
-  BanubaAudioBrowserSDK: a5e15531c33158f943fe6c320cec497fcca6a3ab
-  BanubaEffectPlayer: 0504bbb36a0bcff2880b9c0cfcf4bcab43ab7d94
-  BanubaLicenseServicingSDK: 6a7712df1815a4e663ccecc16a2c8e026ce15cf6
-  BanubaSDK: 0968b112c7af8bcb238058b12ee88462ff1ea80b
-  BanubaSDKServicing: d45e562d5b521c56a726dcdf593a07187969591d
-  BanubaSDKSimple: 4375ecf86c4a5e297db9653532cc27ae35b636de
-  BanubaUtilities: 3d0456fb770408403d7d24af69f897642ba4c7f1
-  BanubaVideoEditorGallerySDK: 5b3825ccc34bf54de1f06e0adb05638f7ab170f0
-  BanubaVideoEditorSDK: bfdabc95a289d0d0118ff053894e959ac757f4b8
-  BNBLicenseUtils: 987369680f842c21833a007f74aa17bd636d1cc2
-  VEEffectsSDK: 5750c13228f8105825f35e9f03348574c216c5b5
-  VEExportSDK: 3996b64e13007097bff0b84e69b15ab629b0093b
-  VEPlaybackSDK: 185a034f9f7b9fa325cb746a217964bcaa9bf8cb
-  VideoEditor: 183f00b0b40f2850af9943475fb427d22df89e44
+  BanubaARCloudSDK: 52d56decbb489bb32f8f208084d29ededd2ecaf5
+  BanubaAudioBrowserSDK: 312eab64964501af4779d37d147a5b050cd303b6
+  BanubaEffectPlayer: 0cc6bdcdf83583123bdc9bac8de5fa0bce2c079f
+  BanubaLicenseServicingSDK: 6c07bd3c90c212f66a843df68e88bff121a2a191
+  BanubaSDK: 35bb9495db729e990483b8160321c9dc5499e52c
+  BanubaSDKServicing: 63051b1d8d3f953a840de936a7b35944cd9383e3
+  BanubaSDKSimple: f89b5859061bee2627406d5a5f694867998204f0
+  BanubaUtilities: e84d946e1bc1de5e5937ea02c31bbcdf183b6665
+  BanubaVideoEditorGallerySDK: 0e9f78ee387d9d22e430fe9ee9b09ed821cdda82
+  BanubaVideoEditorSDK: 9e4afa69533778aa58a83c71f7c6d940abda7fec
+  BNBLicenseUtils: bca2f3f55c2dcee825d78a02cf177849e1b72506
+  VEEffectsSDK: 99041e8eb598d73409b08a889d5f49b85d03f280
+  VEExportSDK: f7192575ec01173d57b4fa4f0996d36a3646cfa7
+  VEPlaybackSDK: 082cb5d7cd28fdfdfb117eeef0a237607e3bca9a
+  VideoEditor: 6b23e5d6da4ccc073b6fad52f3bbe5e53ebfd50e
 
-PODFILE CHECKSUM: 3e212779dee9b4cf9f71de82e19a50d2d8ba4c57
+PODFILE CHECKSUM: 3c809d6629b93b4ff1ac9be1bfa23df1b58482a1
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0
