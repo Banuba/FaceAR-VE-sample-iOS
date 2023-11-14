@@ -33,7 +33,6 @@
 		8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = ../BanubaSdk.xcodeproj; sourceTree = "<group>"; };
 		8A828F3E2727FFBC00639C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8A828F402727FFC900639C56 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AB40EA025D52C36002A871F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		8AB40EBB25D5334A002A871F /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
 		8AB40EBC25D5334A002A871F /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
@@ -167,7 +166,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ru,
 			);
 			mainGroup = 8ABEFDA325D2C66F00C0B02F;
 			productRefGroup = 8ABEFDAD25D2C66F00C0B02F /* Products */;
@@ -271,7 +269,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8A828F3E2727FFBC00639C56 /* en */,
-				8A828F402727FFC900639C56 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
