@@ -95,7 +95,9 @@
 				5C547DF646BC803FD1AAC750 /* Pods */,
 				03683F51FC05B511FDC33E14 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		8ABEFDAD25D2C66F00C0B02F /* Products */ = {
 			isa = PBXGroup;
@@ -134,6 +136,7 @@
 				8ABEFDA925D2C66F00C0B02F /* Frameworks */,
 				8ABEFDAA25D2C66F00C0B02F /* Resources */,
 				4700E77BB500372711E45044 /* [CP] Embed Pods Frameworks */,
+				2B8126A03669694E11BF0B4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +214,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B8126A03669694E11BF0B4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAR-VE-Sample/Pods-FaceAR-VE-Sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4700E77BB500372711E45044 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import BanubaSdk
+import BNBSdkApi
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     BanubaSdkManager.initialize(
-      resourcePath: [Bundle.main.bundlePath + "/effects"],
+      resourcePath: [
+        Bundle.main.bundlePath + "/effects",
+        Bundle.main.bundlePath + "/bnb-resources"
+      ],
       clientTokenString: AppDelegate.licenseToken
     )
     return true
