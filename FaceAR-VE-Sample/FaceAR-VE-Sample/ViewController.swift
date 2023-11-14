@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import BanubaSdk
+import BNBSdkApi
 import VEExportSDK
 import BanubaVideoEditorSDK
 
@@ -21,7 +21,7 @@ class FaceARViewController: UIViewController {
   
   // MARK: - Face AR Properties
   private var sdkManager: BanubaSdkManager? = BanubaSdkManager()
-  private let config = EffectPlayerConfiguration(renderMode: .video)
+  private let config = EffectPlayerConfiguration()
   
   private var effectPlayerView: EffectPlayerView?
   
@@ -217,7 +217,10 @@ extension FaceARViewController: BanubaVideoEditorDelegate {
 extension FaceARViewController {
   private func reloadSdkManager() {
     BanubaSdkManager.initialize(
-      resourcePath: [Bundle.main.bundlePath + "/effects"],
+      resourcePath: [
+        Bundle.main.bundlePath + "/effects",
+        Bundle.main.bundlePath + "/bnb-resources"
+      ],
       clientTokenString: AppDelegate.licenseToken
     )
     sdkManager = BanubaSdkManager()
