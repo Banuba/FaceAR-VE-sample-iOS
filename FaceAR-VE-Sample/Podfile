@@ -1,7 +1,7 @@
 source 'https://github.com/Banuba/specs.git'
 platform :ios, '14.0'
 use_frameworks!
-banuba_sdk_version = '1.31.1'
+banuba_sdk_version = '1.31.2'
 
 target 'FaceAR-VE-Sample' do
   pod 'BanubaARCloudSDK', banuba_sdk_version #optional
