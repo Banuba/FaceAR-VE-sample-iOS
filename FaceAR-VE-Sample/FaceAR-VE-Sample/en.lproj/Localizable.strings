@@ -438,6 +438,9 @@
 /* Edit overlay item button title */
 "OverlayEditor.Edit" = "Edit";
 
+/* Style overlay item button title */
+"OverlayEditor.Style" = "Style";
+
 /* Add text button title */
 "OverlayEditor.Text" = "Text";
 
@@ -469,6 +472,10 @@
 "com.banuba.overlayEditor.captions.tryAgain" = "Try Again";
 "com.banuba.overlayEditor.captions.noInternetConnectionToast" = "The internet connection appears to be offline.";
 
+"com.banuba.overlayEditor.captions.textStyle.basic" = "Basic";
+"com.banuba.overlayEditor.captions.textStyle.multicolor" = "Multicolor";
+"com.banuba.overlayEditor.captions.textStyle.gradient" = "Gradient";
+
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestion" = "Create new captions?";
 "com.banuba.overlayEditor.captions.createNewCaptionsQuestionDetails" = "Previously created captions will be deleted.";
 "com.banuba.overlayEditor.captions.create" = "Create";
@@ -480,6 +487,7 @@
 "com.banuba.overlayEditor.captions.deleteCaptionsTitle" = "Delete captions?";
 "com.banuba.overlayEditor.captions.deleteSelectedCaption" = "Delete selected";
 "com.banuba.overlayEditor.captions.deleteAllCaptions" = "Delete all";
+
 "com.banuba.overlayEditor.captions.selectLanguage" = "Select language";
 "com.banuba.overlayEditor.captions.language.english" = "English";
 "com.banuba.overlayEditor.captions.language.mandarin" = "Mandarin";
@@ -541,7 +549,7 @@
 "MusicLibrary.mixedForYou" = "Mixed for you";
 "MusicLibrary.noInternetTitle" = "No internet connection";
 "MusicLibrary.noInternetMessage" = "Check your connection or try again.";
-"MusicLibrary.noContentMessage" = "Audio content is temporarily unavailable";
+"MusicLibrary.noContentMessage" = "Sorry, audio content is temporarily unavailable";
 "MusicLibrary.noFavoritesTitle" = "No favorites yet";
 "MusicLibrary.noFavoritesMessage" = "Mark your favorite songs and always have them here.";
 "MusicLibrary.noRecentsTitle" = "No recent sounds";

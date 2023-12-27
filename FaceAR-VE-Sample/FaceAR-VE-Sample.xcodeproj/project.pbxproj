@@ -19,19 +19,7 @@
 		8ABEFDBC25D2C67000C0B02F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABEFDBA25D2C67000C0B02F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8A15868625D41DD00022E2DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57AB757820FF4A240013C11F;
-			remoteInfo = BanubaSdk;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = ../BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
-		8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = ../BanubaSdk.xcodeproj; sourceTree = "<group>"; };
 		8A828F3E2727FFBC00639C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AB40EA025D52C36002A871F /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		8AB40EBB25D5334A002A871F /* bundleEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleEffects; sourceTree = "<group>"; };
@@ -63,8 +51,6 @@
 		03683F51FC05B511FDC33E14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A15868125D41DD00022E2DA /* BanubaEffectPlayer.xcframework */,
-				8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */,
 				DA750DB5307F1CBC0BF9E0F7 /* Pods_FaceAR_VE_Sample.framework */,
 			);
 			name = Frameworks;
@@ -77,14 +63,6 @@
 				C95E2804C9D13C12035733A2 /* Pods-FaceAR-VE-Sample.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		8A15868325D41DD00022E2DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8A15868725D41DD00022E2DA /* BanubaSdk.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8ABEFDA325D2C66F00C0B02F = {
@@ -173,28 +151,12 @@
 			mainGroup = 8ABEFDA325D2C66F00C0B02F;
 			productRefGroup = 8ABEFDAD25D2C66F00C0B02F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8A15868325D41DD00022E2DA /* Products */;
-					ProjectRef = 8A15868225D41DD00022E2DA /* BanubaSdk.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8ABEFDAB25D2C66F00C0B02F /* FaceAR-VE-Sample */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8A15868725D41DD00022E2DA /* BanubaSdk.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BanubaSdk.framework;
-			remoteRef = 8A15868625D41DD00022E2DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8ABEFDAA25D2C66F00C0B02F /* Resources */ = {
