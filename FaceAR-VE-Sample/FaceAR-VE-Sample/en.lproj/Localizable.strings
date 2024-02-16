@@ -545,8 +545,6 @@
 "MusicLibrary.tryAgainLaterTitle" = "Please try again later";
 "MusicLibrary.allTracks" = "All tracks";
 "MusicLibrary.popular" = "Popular";
-"MusicLibrary.newReleases" = "New Releases";
-"MusicLibrary.mixedForYou" = "Mixed for you";
 "MusicLibrary.noInternetTitle" = "No internet connection";
 "MusicLibrary.noInternetMessage" = "Check your connection or try again.";
 "MusicLibrary.noContentMessage" = "Sorry, audio content is temporarily unavailable";
@@ -557,6 +555,22 @@
 "MusicLibrary.noMatchesMessage" = "No matches";
 "MusicLibrary.searchBarPlaceholder" = "Search by song names";
 "MusicLibrary.searchBarCancelButtonTitle" = "Cancel";
+
+// MARK: - Soundstripe
+
+"Soundstripe.playlists" = "Playlists";
+"Soundstripe.categories" = "Categories";
+"Soundstripe.trendingSongs" = "Trending Songs";
+"Soundstripe.moods" = "Moods";
+"Soundstripe.styles" = "Styles";
+"Soundstripe.instruments" = "Instruments";
+"Soundstripe.searchBarPlaceholder" = "Search";
+"Soundstripe.homeScreenTitle" = "Music";
+"Soundstripe.genres" = "Genres";
+"Soundstripe.viewAll" = "View All";
+"Soundstripe.noContentMessage" = "Sorry, audio content is temporarily unavailable";
+"Soundstripe.showMore" = "Show More";
+"Soundstripe.searchBarCancelButtonTitle" = "Cancel";
 
 // MARK: - Hands-free
 "hands.free.video.drag.title" = "Drag to set video duration";
