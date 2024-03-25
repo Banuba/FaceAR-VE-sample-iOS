@@ -26,6 +26,8 @@
 	<string>Save Photos!</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photos!</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Media Library!</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
